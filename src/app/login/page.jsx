@@ -10,8 +10,8 @@ const LoginPage = () => {
         event.preventDefault();
         try {
             const dataAPI = {
-                'username':`${username}`,
-                'password': `${password}`
+                "username":`${username}`,
+                "password": `${password}`
             }
             const response = await loginAPI('login', dataAPI)
             if (response) {

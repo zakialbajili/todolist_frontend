@@ -1,4 +1,3 @@
-import Image from "next/image";
 const Navbar = ()=>{
     return(
         <header className="fixed top-0 left-0 right-0  max-h-fit bg-slate-900/50  backdrop-blur-sm ">

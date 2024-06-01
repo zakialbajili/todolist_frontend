@@ -1,5 +1,6 @@
 export async function loginAPI (url, dataAPI){
     try {
+        console.log(dataAPI)
         const response = await fetch(`http://localhost:5000/api/${url}`,{
             method:'POST',
             headers:{
