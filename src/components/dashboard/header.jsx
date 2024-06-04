@@ -1,4 +1,4 @@
-const Navbar = ()=>{
+const Navbar = ({nameUser})=>{
     return(
         <header className="fixed top-0 left-0 right-0  max-h-fit bg-slate-900/50  backdrop-blur-sm ">
             <div className="max-w-full border-b border-white/20  container">
@@ -17,7 +17,7 @@ const Navbar = ()=>{
                         </ul>
                     </div>
                     <div className="flex flew-row">
-                        <h1 className="pr-4 text-sm border-r border-white/20 ">Zaky Maulana Al Bajili</h1>
+                        <h1 className="pr-4 text-sm border-r border-white/20 ">{nameUser.name}</h1>
                         <div className="pl-4 text-sm "> logo</div>
                     </div>
                 </div>

@@ -3,6 +3,7 @@ import React from 'react';
 import {useState} from 'react'
 import navigate from "@/helpers/action"
 import {loginAPI} from '@/helpers/api';
+import { setCookies } from '@/helpers/cookies';
 const LoginPage = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] =useState('');
@@ -15,6 +16,7 @@ const LoginPage = () => {
             }
             const response = await loginAPI('login', dataAPI)
             if (response) {
+                setCookies('session', JSON.stringify(response.data))
                 navigate('/dashboard')
             } else {
                 console.error('Login failed');

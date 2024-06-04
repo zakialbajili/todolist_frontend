@@ -1,10 +1,15 @@
 "use server"
 import { cookies } from "next/headers"
-const getCookies = ()=>{
-    cookies().get('session').fetch((response)=>{
-        const storeCookies = response
-        return storeCookies
-    })
+
+const setCookies = (name,dataSession)=>{
+    cookies().set(name, dataSession)
+    // const result = cookies().get(name)
+    // console.log(result)
+}
+const getCookies =  (name)=>{
+    const response =  cookies().get(name)
+    const value = JSON.parse(response.value)
+    return value
 
 }
-export {getCookies}
+export {setCookies,getCookies}
